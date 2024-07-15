@@ -1,0 +1,57 @@
+import java.util.*;
+class Employee{
+        static String name;
+        int hour;
+        int totalSales;
+        public static void calculations(){
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("Enter The Name Of Employee:");
+            name = scanner.nextLine();
+            Employee e1 = new Employee();
+            System.out.println("Enter The Working Hours of Employee:");
+            e1.hour=scanner.nextInt();
+            System.out.println("Enter The TotalSales Of an Employee:");
+            e1.totalSales=scanner.nextInt();
+            if(e1.totalSales>=100 && e1.totalSales <1000){
+                double comm=e1.totalSales*0.01;
+                double sal=e1.hour*50;
+                double totalSal=comm+sal;
+                System.out.println("The TotalSales Commision is:"+comm);
+                System.out.println("The Salary of Employee is:"+sal);
+                System.out.println("The TotalSalry After Combining Sal + Commision Is: "+totalSal);
+            }
+            else if(e1.totalSales>=1000 && e1.totalSales<10000){
+                double comm=e1.totalSales*0.02;
+                double sal=e1.hour*50;
+                double totalSal=comm+sal;
+                System.out.println("The TotalSales Commision is:"+comm);
+                System.out.println("The Salary of Employee is:"+sal);
+                System.out.println("The TotalSalry After Combining Sal + Commision Is: "+totalSal);
+            }
+            else if(e1.totalSales>=10000 && e1.totalSales<25000){
+                double comm=e1.totalSales*0.03;
+                double sal=e1.hour*50;
+                double totalSal=comm+sal;
+                System.out.println("The TotalSales Commision is:"+comm);
+                System.out.println("The Salary of Employee is:"+sal);
+                System.out.println("The TotalSalry After Combining Sal + Commision Is: "+totalSal);
+            }
+            else if(e1.totalSales>=25000){
+                double comm=e1.totalSales*0.035;
+                double sal=e1.hour*50;
+                double totalSal=comm+sal;
+                System.out.println("The TotalSales Commision is:"+comm);
+                System.out.println("The Salary of Employee is:"+sal);
+                System.out.println("The TotalSalry After Combining Sal + Commision Is: "+totalSal);
+            }
+            else{
+                System.out.println("Invalid");
+            }
+            scanner.close();
+        }
+
+        public static void main(String[]args){
+            System.out.println("Welcome To Amazon!!");
+            calculations();
+        }
+}
