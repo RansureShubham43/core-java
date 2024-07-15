@@ -1,0 +1,43 @@
+import java.util.*;
+    class Parcel{
+        //Declaration of static variable
+            static String name;
+      // Create calculation method.
+      public static void calculation(){
+        Scanner scanner=new Scanner(System.in);
+        //Getting Customer Name From User.
+        System.out.println("Enter The Customer Name:");
+        name=scanner.nextLine();
+  //Getting Parcel weight from user.
+        System.out.println("Enter the Parcel Weight in Between 1 to 30:");
+        double weight= scanner.nextDouble();
+  // if parcel weight is between 10 kg.
+        if(weight<=10){
+            double total=weight*30;
+            System.out.println("The Parcel Charges are:"+total);
+        }
+  //if parcel weight is between 20 kg.
+       else if(weight>10 && weight<=20){
+            double total=weight*20;
+            System.out.println("The Parcel Charges are:"+total);
+        }
+//if parcel weight is between 30 kg.
+        else if(weight>20 && weight<=30){
+            double total=weight*15;
+            System.out.println("The Parcel Charges are:"+total);
+        }
+        else{
+            System.out.println("Invalid");
+        }
+// Scanner class is closed.
+        scanner.close();
+
+    }
+
+        public static void main(String[]args){
+        System.out.println("Welcome To XpressBase");
+  // calculation method called.
+        calculation();
+        System.out.println("Thank You ! Hope You Like Our Services");
+        }
+}
